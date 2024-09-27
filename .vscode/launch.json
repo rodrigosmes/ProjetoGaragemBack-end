@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-GaragemManagerApplication<garagem-manager>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.garagemrodrigo.garagem_manager.GaragemManagerApplication",
+            "projectName": "garagem-manager",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}

@@ -1,0 +1,36 @@
+<html>
+
+<head th:replace="~{header::header}"></head>
+
+<body>
+    <h1>Listagem de Veiculos</h1>
+    <a href="/veiculo/create">Adicionar novo Veiculo</a>
+    <br />
+    <br />
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <td>Id</td>
+                <td>Nome</td>
+                <td>Tipo de Veiculo</td>
+                <td>Descricao</td>
+                <td>Data de Criação</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="veiculo : ${listaVeiculo}">
+                <td th:text="${veiculo.id}"></td>
+                <td th:text="${veiculo.name}"></td>
+                <td th:text="${veiculo.type}"></td>
+                <td th:text="${veiculo.description}"></td>
+                <td th:text="${veiculo.createdDate}"></td>
+                <td>
+                    <a th:href="@{/veiculo/edit/{id}(id=${veiculo.id})}">Editar</a>
+                    <a th:href="@{/veiculo/delete/{id}(id=${veiculo.id})}">Excluir</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+
+</html>

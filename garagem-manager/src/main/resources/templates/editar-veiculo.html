@@ -1,0 +1,26 @@
+<html>
+
+<head th:replace="~{header::header}"></head>
+
+<body>
+    <div class="container">
+        <form th:action="@{/veiculo/edit/{id}(id=${editVeiculo.id})}" method="post">
+            <legend>Editar Veiculo</legend>
+            <div class="mb-3">
+                <label class="form-label">Nome do Veiculo</label>
+                <input class="form-control" type="text" id="name" name="name" th:field="${editVeiculo.name}" />
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Tipo de Veiculo</label>
+                <input class="form-control" type="text" id="owner" name="type" th:field="${editVeiculo.type}" />
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Descricao do Veiculo</label>
+                <input class="form-control" type="text" id="status" name="description" th:field="${editVeiculo.description}" />
+            </div>
+            <input type="submit" value="Editar Veiculo" class="btn btn-primary">
+        </form>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,18 @@
+<html>
+
+<head th:replace="~{header::header}"></head>
+
+<body>
+    <div class="container">
+    <form action="/fabricante/save" method="post">
+        <legend>Inserir um novo Fabricante</legend>
+        <div class="mb-3">
+            <label class="form-label">Nome do Fabricante</label>
+            <input class="form-control" type="text" id="name" name="name" />
+        </div>
+        <input type="submit" value="Criar Fabricante" class="btn btn-primary">
+    </form>
+    </div>
+</body>
+
+</html>
